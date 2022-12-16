@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const DATABASE_URL = " mongodb+srv://pgroom:pgroom@cluster0.l4lhcji.mongodb.net/?retryWrites=true&w=majority"
+const DATABASE_URL = "mongodb+srv://pgroom:pgroom@cluster0.l4lhcji.mongodb.net/?retryWrites=true&w=majority"
 
 mongoose.connect(DATABASE_URL, { useNewUrlParser: true })
 const db = mongoose.connection
