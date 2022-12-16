@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "sahil","new_branch" ]
+    branches: [ "sahil" ]
   pull_request:
     # Sequence of patterns matched against refs/heads
     branches: ["sahil"]   
