@@ -9,6 +9,10 @@ const subscriberSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  amountPaid : {
+    type : Number,
+    required : true
+  },
   subscribeDate: {
     type: Date,
     required: true,

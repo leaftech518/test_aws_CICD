@@ -23,7 +23,8 @@ router.get('/:id', getSubscriber, (req, res) => {
 router.post('/', async (req, res) => {
   const subscriber = new Subscriber({
     name: req.body.name,
-    subscribedToChannel: req.body.subscribedToChannel
+    subscribedToChannel: req.body.subscribedToChannel,
+    amountPaid : req.body.amount
   })
   try {
     const newSubscriber = await subscriber.save()
