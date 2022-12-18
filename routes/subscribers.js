@@ -5,19 +5,19 @@ const Subscriber = require('../models/subscriber')
 
 
 // Getting all
-router.get('/', async (req, res) => {
-  try {
-    const subscribers = await Subscriber.find()
-    res.json(subscribers)
-  } catch (err) {
-    res.status(500).json({ message: err.message })
-  }
-})
+// router.get('/', async (req, res) => {
+//   try {
+//     const subscribers = await Subscriber.find()
+//     res.json(subscribers)
+//   } catch (err) {
+//     res.status(500).json({ message: err.message })
+//   }
+// })
 
 // Getting One
-router.get('/:id', getSubscriber, (req, res) => {
-  res.json(res.subscriber)
-})
+// router.get('/:id', getSubscriber, (req, res) => {
+//   res.json(res.subscriber)
+// })
 
 // Creating one
 router.post('/', async (req, res) => {
@@ -73,6 +73,17 @@ async function getSubscriber(req, res, next) {
 
   res.subscriber = subscriber
   next()
+}
+
+router.get("/qr",getQRData,async(req,res)=>{
+  try {
+    res.send("helo");
+  } catch (err) {
+    console.log(err);
+  }
+});
+async function getQRData(req, res, next) {
+  res.send("connected");
 }
 
 module.exports = router
